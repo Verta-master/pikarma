@@ -28,3 +28,46 @@
     }
   }
 }
+
+.subscribe {
+  position: relative;
+  width: 270px;
+  height: 46px;
+  padding-left: 18px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #42454a;
+  text-align: left;
+  letter-spacing: .8px;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  .transition();
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px;
+    width: 21px;
+    height: 16px;
+    background-image: url(../img/icons/telegram.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.35;
+    .transition();
+  }
+  
+  &:hover,
+  &:active {
+    background-color: @bordo;
+    .transition();
+    
+    &::after {
+      opacity: 1;
+      .transition();
+    }
+  }
+}
