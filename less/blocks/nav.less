@@ -1,0 +1,24 @@
+.nav-btn {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 40px;
+  height: 82px;
+  margin-right: 16px;
+  
+  svg {
+    display: block;
+    width: 16px;
+    height: 12px;
+    fill: @black;
+    .transition();
+  }
+  
+  &:hover,
+  &:active {
+    svg {
+      fill: @bordo;
+      .transition();
+    }
+  }
+}

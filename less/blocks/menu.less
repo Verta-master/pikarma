@@ -1,0 +1,41 @@
+.menu {
+  
+}
+
+.menu__list {
+  .reset();
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__item {
+  position: relative;
+  flex-grow: 1;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: @bordo;
+    .transition();
+  }
+}
+
+.menu__link {
+  display: block;
+  padding: 17px 46px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+}
+
+.menu__wrap {
+  display: none;
+}
+
+.menu__submenu {
+  display: none;
+}
