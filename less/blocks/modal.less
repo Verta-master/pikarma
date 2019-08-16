@@ -1,0 +1,28 @@
+.modal {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  bottom: 0;
+  right: -100%;
+  width: 580px;
+  padding: 70px;
+  background-color: #fff;
+  .transition();
+  
+  &--opened {
+    right: 0;
+    .transition();
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 30px;
+}

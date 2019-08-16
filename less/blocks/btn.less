@@ -94,3 +94,30 @@
     .transition();
   }
 }
+
+.btn-close {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  
+  svg {
+    display: block;
+    width: 14px;
+    height: 14px;
+    fill: #333;
+    opacity: .35;
+    .transition();
+  }
+  
+  &:hover,
+  &:active {
+    svg {
+      fill: @bordo;
+      opacity: 1;
+      .transition();
+    }
+  }
+}

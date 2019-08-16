@@ -13,3 +13,45 @@ $(".btn-top").click(function () {
   }, 400);
   return false;
 });
+
+//Search
+$('.header__search').click(function(e) {
+  e.stopPropagation();
+  $('.search').slideDown();
+  $('.overlay').addClass('overlay--show');
+});
+
+$('.search__close').click(function() {
+  $('.search').slideUp();
+  $('.overlay').removeClass('overlay--show');
+});
+
+//Side buttons
+$('.bar--call').click(function() {
+  $('.bar').toggleClass('bar--opened');
+  $('.modal--call').toggleClass('modal--opened');
+  $('.overlay').toggleClass('overlay--show');
+});
+
+$('.modal__close').click(function() {
+  $('.bar').removeClass('bar--opened');
+  $('.modal--call').removeClass('modal--opened');
+  $('.overlay').removeClass('overlay--show');
+});
+
+//Remove modal windows
+$('.overlay').click(function() {
+  $('.search').slideUp();
+  $('.bar').removeClass('bar--opened');
+  $('.modal--call').removeClass('modal--opened');
+  $('.overlay').removeClass('overlay--show');
+});
+
+$('body').keydown(function(e) {
+  if (e.keyCode == 27) {
+    $('.search').slideUp();
+    $('.bar').removeClass('bar--opened');
+    $('.modal--call').removeClass('modal--opened');
+    $('.overlay').removeClass('overlay--show');
+  }
+});

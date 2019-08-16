@@ -43,6 +43,9 @@
     <symbol id="icon-search">
       <path d="M16.709,16.719a1,1,0,0,1-1.412,0l-3.256-3.287A7.475,7.475,0,1,1,15,7.5a7.433,7.433,0,0,1-1.549,4.518l3.258,3.289A1,1,0,0,1,16.709,16.719ZM7.5,2A5.5,5.5,0,1,0,13,7.5,5.5,5.5,0,0,0,7.5,2Z"></path>
     </symbol>
+    <symbol id="close">
+      <path d="M1009.4,953l5.32,5.315a0.987,0.987,0,0,1,0,1.4,1,1,0,0,1-1.41,0L1008,954.4l-5.32,5.315a0.991,0.991,0,0,1-1.4-1.4L1006.6,953l-5.32-5.315a0.991,0.991,0,0,1,1.4-1.4l5.32,5.315,5.31-5.315a1,1,0,0,1,1.41,0,0.987,0.987,0,0,1,0,1.4Z" transform="translate(-1001 -946)"></path>
+    </symbol>
   </svg>
   <!-- End of SVG codes -->
   
@@ -67,12 +70,6 @@
           </svg>
           <span>Поиск</span>
         </button>
-<!--
-        <form action="#" class="search">
-          <button type="submit" class="search__btn"></button>
-          <input type="text" class="search__input" placeholder="Поиск">
-        </form>
--->
       </div>
     </div>
     <nav class="menu">
@@ -391,6 +388,38 @@
         <use href="#icon-quote"></use>
       </svg>
     </button>
+  </div>
+  
+  <div class="overlay"></div>
+  <div class="search">
+    <form action="#" class="search__form">
+      <div class="wrapper search__wrap">
+        <input type="text" class="search__input" placeholder="Найти">
+        <button type="submit" class="btn search__btn">Найти</button>
+        <div class="btn-close search__close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+            <use href="#close"></use>
+          </svg>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  <div class="modal modal--call">
+    <div class="btn-close modal__close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+        <use href="#close"></use>
+      </svg>
+    </div>
+    <p class="modal__title">Обратный звонок</p>
+    <p>Представьтесь, мы вам перезвоним.</p>
+    <form action="#" class="form">
+      <input type="text" class="form__input" placeholder="Ваше имя *" required>
+      <input type="tel" class="form__input" placeholder="Телефон *" required>
+      <input type="checkbox" id="check" class="form__checkbox">
+      <label for="check" class="form__label">Я согласен на <a href="#">обработку персональных данных</a></label>
+      <button type="submit" class="btn form__btn">Отправить</button>
+    </form>
   </div>
   
   <script src="js/jquery-3.2.1.min.js"></script>
