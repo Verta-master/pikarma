@@ -849,14 +849,66 @@ button {
   list-style: none;
 }
 .nav__subitem {
+  position: relative;
   margin-bottom: 5px;
 }
 .nav__drop {
+  display: none;
   padding: 12px 0 15px 10px;
 }
 .nav__drop li {
   font-size: 13px;
   margin-bottom: 5px;
+}
+.nav__sublink {
+  display: block;
+  padding-right: 25px;
+}
+.nav__arrow {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 19px;
+  height: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 3px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  cursor: pointer;
+  -webkit-transition: linear 0.3s;
+  transition: linear 0.3s;
+}
+.nav__arrow svg {
+  display: block;
+  width: 3px;
+  height: 5px;
+  fill: #333;
+  -webkit-transition: linear 0.3s;
+  transition: linear 0.3s;
+}
+.nav__arrow:hover,
+.nav__arrow:active {
+  background-color: #782029;
+  -webkit-transition: linear 0.3s;
+  transition: linear 0.3s;
+}
+.nav__arrow:hover svg,
+.nav__arrow:active svg {
+  fill: #fff;
+  -webkit-transition: linear 0.3s;
+  transition: linear 0.3s;
+}
+.nav__arrow--open {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
 }
 .menu__list {
   margin: 0;
@@ -1801,4 +1853,41 @@ h2,
   margin-top: 0;
   margin-bottom: 24px;
   font-size: 30px;
+}
+.modal__settings {
+  float: right;
+  position: relative;
+  padding-left: 26px;
+  margin-top: 57px;
+  color: #999;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  -webkit-transition: linear 0.3s;
+  transition: linear 0.3s;
+}
+.modal__settings svg {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  display: block;
+  width: 14px;
+  height: 14px;
+  fill: #333;
+  opacity: 0.35;
+  -webkit-transition: linear 0.3s;
+  transition: linear 0.3s;
+}
+.modal__settings:hover,
+.modal__settings:active {
+  color: #782029;
+  -webkit-transition: linear 0.3s;
+  transition: linear 0.3s;
+}
+.modal__settings:hover svg,
+.modal__settings:active svg {
+  fill: #782029;
+  opacity: 1;
+  -webkit-transition: linear 0.3s;
+  transition: linear 0.3s;
 }

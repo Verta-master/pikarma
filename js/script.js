@@ -45,6 +45,12 @@ $('.bar--feedback').click(function() {
   $('.overlay').toggleClass('overlay--show');
 });
 
+$('.subscribe').click(function() {
+  $('.bar').toggleClass('bar--opened');
+  $('.modal--subscribe').toggleClass('modal--opened');
+  $('.overlay').toggleClass('overlay--show');
+});
+
 //Menu
 $('.nav-btn').click(function() {
   $('.nav').slideDown();
@@ -56,6 +62,11 @@ $('.nav__close').click(function() {
 
 $('.nav__close-back').click(function() {
   $('.nav').slideUp();
+});
+
+$('.nav__arrow').click(function() {
+  $(this).next().slideToggle();
+  $(this).toggleClass('nav__arrow--open');
 });
 
 //Remove modal windows
