@@ -40,3 +40,154 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
+.nav__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.nav__close-back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.nav__logo {
+  display: block;
+  width: 148px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.nav__columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__main {
+  width: 75%;
+  padding-right: 90px;
+}
+
+.nav__contacts {
+  width: 25%;
+  
+  .contacts {
+    padding-top: 34px;
+    border-top: 1px solid #f1f1f1;
+  }
+  .contacts__phone::before {
+    background-image: url(../img/icons/call.svg);
+  }
+  .contacts__mail::before {
+    background-image: url(../img/icons/mail.svg);
+  }
+  .contacts__address::before {
+    background-image: url(../img/icons/location.svg);
+  }
+  .contacts__callback {
+    &:hover,
+    &:active {
+      color: @bordo;
+      .transition();
+    }
+  }
+}
+
+.nav__btn {
+  display: block;
+  width: 100%;
+  margin-bottom: 34px;
+}
+
+.nav__search {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 13px;
+  border: 1px solid #f1f1f1;
+}
+
+.nav__input {
+  flex-grow: 1;
+  height: 48px;
+  padding-left: 20px;
+}
+
+.nav__search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 52px;
+  height: 48px;
+  
+  svg {
+    display: block;
+    width: 17px;
+    height: 17px;
+    fill: #333;
+    opacity: 0.35;
+    .transition();
+  }
+  
+  &:hover,
+  &:active {
+    svg {
+      fill: @bordo;
+      opacity: 1;
+      .transition();
+    }
+  }
+}
+
+.nav__list {
+  .reset();
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nav__item {
+  width: 33%;
+  padding-right: 50px;
+  padding-top: 55px;
+  
+  a {
+    .transition();
+    
+    &:hover,
+    &:active {
+      color: @bordo;
+      .transition();
+    }
+  }
+}
+
+.nav__link {
+  display: block;
+  margin-bottom: 20px;
+  letter-spacing: .8px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.nav__drop,
+.nav__sublist {
+  .reset();
+  list-style: none;
+}
+
+.nav__subitem {
+  margin-bottom: 5px;
+}
+
+.nav__drop {
+  padding: 12px 0 15px 10px;
+  
+  li {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+}

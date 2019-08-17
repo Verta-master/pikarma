@@ -45,6 +45,19 @@ $('.bar--feedback').click(function() {
   $('.overlay').toggleClass('overlay--show');
 });
 
+//Menu
+$('.nav-btn').click(function() {
+  $('.nav').slideDown();
+});
+
+$('.nav__close').click(function() {
+  $('.nav').slideUp();
+});
+
+$('.nav__close-back').click(function() {
+  $('.nav').slideUp();
+});
+
 //Remove modal windows
 $('.modal__close').click(function() {
   $('.bar').removeClass('bar--opened');
@@ -65,5 +78,6 @@ $('body').keydown(function(e) {
     $('.bar').removeClass('bar--opened');
     $('.modal').removeClass('modal--opened');
     $('.overlay').removeClass('overlay--show');
+    $('.nav').slideUp();
   }
 });

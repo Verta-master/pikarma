@@ -46,6 +46,9 @@
     <symbol id="close">
       <path d="M1009.4,953l5.32,5.315a0.987,0.987,0,0,1,0,1.4,1,1,0,0,1-1.41,0L1008,954.4l-5.32,5.315a0.991,0.991,0,0,1-1.4-1.4L1006.6,953l-5.32-5.315a0.991,0.991,0,0,1,1.4-1.4l5.32,5.315,5.31-5.315a1,1,0,0,1,1.41,0,0.987,0.987,0,0,1,0,1.4Z" transform="translate(-1001 -946)"></path>
     </symbol>
+    <symbol id="icon-back">
+      <path d="M998,953H986.4l3.313,3.286a1,1,0,0,1,0,1.414,0.99,0.99,0,0,1-1.407,0l-5.034-4.993a1,1,0,0,1,0-1.414l5.034-5.024a0.992,0.992,0,0,1,1.407,0,1.006,1.006,0,0,1,0,1.415L986.384,951H998A1,1,0,0,1,998,953Z" transform="translate(-983 -946)"></path>
+    </symbol>
   </svg>
   <!-- End of SVG codes -->
   
@@ -481,8 +484,8 @@
           </svg>
         </div>
         <div class="btn-close nav__close-back">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
-            <use href="#close"></use>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 12">
+            <use href="#icon-back"></use>
           </svg>
         </div>
         <img src="img/images/logo.jpg" alt="logo" class="nav__logo">
@@ -490,7 +493,11 @@
           <div class="nav__main">
             <form action="#" class="nav__search">
               <input type="text" class="nav__input" placeholder="Поиск">
-              <button type="submit" class="nav__search-btn"></button>
+              <button type="submit" class="nav__search-btn">
+                <svg viewBox="0 0 17 17" aria-hidden="true">
+                  <use href="#icon-search"></use>
+                </svg>
+              </button>
             </form>
             <ul class="nav__list">
               <li class="nav__item">
