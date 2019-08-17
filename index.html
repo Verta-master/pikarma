@@ -411,20 +411,175 @@
         <use href="#close"></use>
       </svg>
     </div>
-    <p class="modal__title">Обратный звонок</p>
-    <p>Представьтесь, мы вам перезвоним.</p>
-    <form action="#" class="form">
-      <input type="text" class="form__input" placeholder="Ваше имя *" required>
-      <input type="tel" class="form__input" placeholder="Телефон *" required>
-      <input type="checkbox" id="check" class="form__checkbox">
-      <label for="check" class="form__label">Я согласен на <a href="#">обработку персональных данных</a></label>
-      <button type="submit" class="btn form__btn">Отправить</button>
-    </form>
+    <div class="modal__wrap">
+      <p class="modal__title">Обратный звонок</p>
+      <p>Представьтесь, мы вам перезвоним.</p>
+      <form action="#" class="form">
+        <input type="text" class="form__input" placeholder="Ваше имя *" required>
+        <input type="tel" class="form__input" placeholder="Телефон *" required>
+        <input type="checkbox" id="check" class="form__checkbox">
+        <label for="check" class="form__label">Я согласен на <a href="#">обработку персональных данных</a></label>
+        <button type="submit" class="btn form__btn">Отправить</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="modal modal--mail">
+    <div class="btn-close modal__close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+        <use href="#close"></use>
+      </svg>
+    </div>
+    <div class="modal__wrap">
+      <p class="modal__title">Задать вопрос</p>
+      <p>Менеджеры компании с радостью ответят на ваши вопросы и произведут расчет стоимости услуг и подготовят индивидуальное коммерческое предложение.</p>
+      <form action="#" class="form">
+        <input type="text" class="form__input" placeholder="Ваше имя *" required>
+        <input type="tel" class="form__input" placeholder="Телефон *" required>
+        <input type="email" class="form__input" placeholder="E-mail">
+        <input type="text" class="form__input" placeholder="Интересующий товар/услуга">
+        <input type="text" class="form__input" placeholder="Сообщение *" required>
+        <input type="checkbox" id="check2" class="form__checkbox">
+        <label for="check2" class="form__label">Я согласен на <a href="#">обработку персональных данных</a></label>
+        <button type="submit" class="btn form__btn">Отправить</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="modal modal--feedback">
+    <div class="btn-close modal__close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+        <use href="#close"></use>
+      </svg>
+    </div>
+    <div class="modal__wrap">
+      <p class="modal__title">Оставить свой отзыв</p>
+      <p>Менеджеры компании с радостью ответят на ваши вопросы и произведут расчет стоимости услуг и подготовят индивидуальное коммерческое предложение.</p>
+      <form action="#" class="form">
+        <input type="text" class="form__input" placeholder="Ваше имя *" required>
+        <input type="text" class="form__input" placeholder="Должность">
+        <input type="file" id="file" class="form__file">
+        <label for="file" class="form__file-btn">Прикрепить файл</label>
+        <div class="form__file-more">+ Еще один файл</div>
+        <label for="video" class="form__video-label">Видео</label>
+        <input type="text" id="video" class="form__video">
+        <div class="form__file-more">+ Еще одно поле</div>
+        <input type="text" class="form__input" placeholder="Отзыв *" required>
+        <input type="checkbox" id="check3" class="form__checkbox">
+        <label for="check3" class="form__label">Я согласен на <a href="#">обработку персональных данных</a></label>
+        <button type="submit" class="btn form__btn">Отправить</button>
+      </form>
+    </div>
+  </div>
+  
+  <div class="nav">
+    <div class="nav__wrap">
+      <div class="wrapper">
+        <div class="btn-close nav__close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+            <use href="#close"></use>
+          </svg>
+        </div>
+        <div class="btn-close nav__close-back">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+            <use href="#close"></use>
+          </svg>
+        </div>
+        <img src="img/images/logo.jpg" alt="logo" class="nav__logo">
+        <div class="nav__columns">
+          <div class="nav__main">
+            <form action="#" class="nav__search">
+              <input type="text" class="nav__input" placeholder="Поиск">
+              <button type="submit" class="nav__search-btn"></button>
+            </form>
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a href="#" class="nav__link">Продукция</a>
+                <ul class="nav__sublist">
+                  <li class="nav__subitem">
+                    <a href="#" class="nav__sublink">Затворы дисковые<span class="nav__arrow"></span></a>
+                    <ul class="nav__drop">
+                      <li><a href="#">Затворы дисковые осесимметричные серии 00</a></li>
+                      <li><a href="#">Затворы дисковые осесимметричные серии 01</a></li>
+                      <li><a href="#">Затворы дисковые трехэксцентриковые серии 03</a></li>
+                      <li><a href="#">Затворы дисковые трехэксцентриковые серии 04</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav__subitem">
+                    <a href="#" class="nav__sublink">Шиберные ножевые задвижки</a>
+                  </li>
+                  <li class="nav__subitem">
+                    <a href="#" class="nav__sublink">Клапаны регулирующие</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Техническая информация</a>
+                <ul class="nav__sublist">
+                  <li class="nav__subitem">
+                    <a href="#" class="nav__sublink">Сертификаты</a>
+                  </li>
+                  <li class="nav__subitem">
+                    <a href="#" class="nav__sublink">Документация</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">Наши проекты</a>
+                <ul class="nav__sublist">
+                  <li class="nav__subitem">
+                    <a href="#" class="nav__sublink">Фотогалерея</a>
+                  </li>
+                  <li class="nav__subitem">
+                    <a href="#" class="nav__sublink">Отзывы</a>
+                  </li>
+                  <li class="nav__subitem">
+                    <a href="#" class="nav__sublink">Референс</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav__item">
+                <a href="#" class="nav__link">О компании</a>
+                <ul class="nav__sublist">
+                  <li class="nav__subitem">
+                    <a href="#" class="nav__sublink">О компании</a>
+                  </li>
+                  <li class="nav__subitem">
+                    <a href="#" class="nav__sublink">Производство</a>
+                  </li>
+                  <li class="nav__subitem">
+                    <a href="#" class="nav__sublink">Партнеры</a>
+                  </li>
+                  <li class="nav__subitem">
+                    <a href="#" class="nav__sublink">Карьера</a>
+                  </li>
+                  <li class="nav__subitem">
+                    <a href="#" class="nav__sublink">Контакты</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <aside class="nav__contacts">
+            <a href="#" class="btn nav__btn">Задать вопрос</a>
+            <div class="contacts">
+              <div class="contacts__phone">
+                <a href="tel:+73433010502" class="contacts__call">+7 (343) 301-05-02</a>
+                <a href="#" class="contacts__callback">Заказать звонок</a>
+              </div>
+              <a href="mailto:info@pikarma.ru" class="contacts__mail">info@pikarma.ru</a>
+              <address class="contacts__address">620062, г. Екатеринбург, ул. Гагарина, д.8, офис. 718/2</address>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
   </div>
   
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/jquery.nicescroll.min.js"></script>
 
 <!-- Sliders -->
   <script>
@@ -441,6 +596,12 @@
       preventClicks: false,
       preventClicksPropagation: false,
     });
+  </script>
+  
+<!-- Scrollbar -->
+  <script>
+    $('.modal__wrap').niceScroll();
+    $('.nav__wrap').niceScroll();
   </script>
 </body>
 </html>

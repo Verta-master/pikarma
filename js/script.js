@@ -33,17 +33,29 @@ $('.bar--call').click(function() {
   $('.overlay').toggleClass('overlay--show');
 });
 
-$('.modal__close').click(function() {
-  $('.bar').removeClass('bar--opened');
-  $('.modal--call').removeClass('modal--opened');
-  $('.overlay').removeClass('overlay--show');
+$('.bar--mail').click(function() {
+  $('.bar').toggleClass('bar--opened');
+  $('.modal--mail').toggleClass('modal--opened');
+  $('.overlay').toggleClass('overlay--show');
+});
+
+$('.bar--feedback').click(function() {
+  $('.bar').toggleClass('bar--opened');
+  $('.modal--feedback').toggleClass('modal--opened');
+  $('.overlay').toggleClass('overlay--show');
 });
 
 //Remove modal windows
+$('.modal__close').click(function() {
+  $('.bar').removeClass('bar--opened');
+  $('.modal').removeClass('modal--opened');
+  $('.overlay').removeClass('overlay--show');
+});
+
 $('.overlay').click(function() {
   $('.search').slideUp();
   $('.bar').removeClass('bar--opened');
-  $('.modal--call').removeClass('modal--opened');
+  $('.modal').removeClass('modal--opened');
   $('.overlay').removeClass('overlay--show');
 });
 
@@ -51,7 +63,7 @@ $('body').keydown(function(e) {
   if (e.keyCode == 27) {
     $('.search').slideUp();
     $('.bar').removeClass('bar--opened');
-    $('.modal--call').removeClass('modal--opened');
+    $('.modal').removeClass('modal--opened');
     $('.overlay').removeClass('overlay--show');
   }
 });

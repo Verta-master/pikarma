@@ -14,6 +14,7 @@
   margin-top: 40px;
 }
 
+.form__file,
 .form__checkbox {
   display: none;
 }
@@ -69,4 +70,72 @@
 .form__checkbox:checked + .form__label::after {
   left: 17px;
   .transition();
+}
+
+.form__file-btn {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding-left: 25px;
+  padding-right: 55px;
+  font-size: 13px;
+  line-height: 48px;
+  border: 1px solid #f1f1f1;
+  border-radius: 2px;
+  background-color: #f8f9fb;
+  cursor: pointer;
+  background-image: url(../img/icons/paper-clip.svg);
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: right 24px center;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: @bordo;
+    border-color: #782029;
+    background-image: url(../img/icons/paper-clip-white.svg);
+    .transition();
+  }
+}
+
+.form__file-more {
+  display: block;
+  margin-bottom: 37px;
+  border-radius: 2px;
+  border: 1px solid #f1f1f1;
+  color: #999;
+  cursor: pointer;
+  padding: 11px 24px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: @bordo;
+    .transition();
+  }
+}
+
+.form__video-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #999;
+}
+
+.form__video {
+  display: block;
+  width: 100%;
+  height: 48px;
+  padding-left: 25px;
+  padding-right: 55px;
+  font-size: 13px;
+  line-height: 48px;
+  border: 1px solid #f1f1f1;
+  border-radius: 2px;
+  background-color: #f8f9fb;
 }
