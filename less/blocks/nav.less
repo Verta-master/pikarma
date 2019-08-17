@@ -180,14 +180,59 @@
 }
 
 .nav__subitem {
+  position: relative;
   margin-bottom: 5px;
 }
 
 .nav__drop {
+  display: none;
   padding: 12px 0 15px 10px;
   
   li {
     font-size: 13px;
     margin-bottom: 5px;
+  }
+}
+
+.nav__sublink {
+  display: block;
+  padding-right: 25px;
+}
+
+.nav__arrow {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  width: 19px;
+  height: 19px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  transform: rotate(90deg);
+  cursor: pointer;
+  .transition();
+  
+  svg {
+    display: block;
+    width: 3px;
+    height: 5px;
+    fill: #333;
+    .transition();
+  }
+  
+  &:hover,
+  &:active {
+    background-color: @bordo;
+    .transition();
+    
+    svg {
+      fill: #fff;
+      .transition();
+    }
+  }
+  
+  &--open {
+    transform: rotate(-90deg);
   }
 }
