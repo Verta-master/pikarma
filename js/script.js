@@ -28,45 +28,64 @@ $('.search__close').click(function() {
 
 //Side buttons
 $('.bar--call').click(function() {
-  $('.bar').toggleClass('bar--opened');
-  $('.modal--call').toggleClass('modal--opened');
-  $('.overlay').toggleClass('overlay--show');
+  $('.bar').addClass('bar--opened');
+  $('.modal--call').addClass('modal--opened');
+  $('.overlay').addClass('overlay--show');
 });
 
 $('.bar--mail').click(function() {
-  $('.bar').toggleClass('bar--opened');
-  $('.modal--mail').toggleClass('modal--opened');
-  $('.overlay').toggleClass('overlay--show');
+  $('.bar').addClass('bar--opened');
+  $('.modal--mail').addClass('modal--opened');
+  $('.overlay').addClass('overlay--show');
 });
 
 $('.bar--feedback').click(function() {
-  $('.bar').toggleClass('bar--opened');
-  $('.modal--feedback').toggleClass('modal--opened');
-  $('.overlay').toggleClass('overlay--show');
+  $('.bar').addClass('bar--opened');
+  $('.modal--feedback').addClass('modal--opened');
+  $('.overlay').addClass('overlay--show');
 });
 
 $('.subscribe').click(function() {
-  $('.bar').toggleClass('bar--opened');
-  $('.modal--subscribe').toggleClass('modal--opened');
-  $('.overlay').toggleClass('overlay--show');
+  $('.bar').addClass('bar--opened');
+  $('.modal--subscribe').addClass('modal--opened');
+  $('.overlay').addClass('overlay--show');
 });
 
 //Menu
 $('.nav-btn').click(function() {
   $('.nav').slideDown();
+  $('.overlay').addClass('overlay--show');
 });
 
 $('.nav__close').click(function() {
   $('.nav').slideUp();
+  $('.overlay').removeClass('overlay--show');
 });
 
-$('.nav__close-back').click(function() {
-  $('.nav').slideUp();
-});
+if (window.innerWidth < 1200) {
+  $('.nav__close-back').click(function() {
+    $('.nav__columns').removeClass('nav__columns--opened');
+    $('.nav__point').removeClass('nav__point--opened');
+    $(this).removeClass('nav__close-back--show');
+    $('.nav__logo').removeClass('nav__logo--hide');
+  });
+} else {
+  $('.nav__close-back').click(function() {
+    $('.nav').slideUp();
+    $('.overlay').removeClass('overlay--show');
+  });
+}
 
 $('.nav__arrow').click(function() {
   $(this).next().slideToggle();
   $(this).toggleClass('nav__arrow--open');
+});
+
+$('.nav__mobile').click(function() {
+  $('.nav__columns').addClass('nav__columns--opened');
+  $(this).next().addClass('nav__point--opened');
+  $('.nav__close-back').addClass('nav__close-back--show');
+  $('.nav__logo').addClass('nav__logo--hide');
 });
 
 //Remove modal windows
@@ -80,6 +99,7 @@ $('.overlay').click(function() {
   $('.search').slideUp();
   $('.bar').removeClass('bar--opened');
   $('.modal').removeClass('modal--opened');
+  $('.nav').slideUp();
   $('.overlay').removeClass('overlay--show');
 });
 
