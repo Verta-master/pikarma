@@ -1,0 +1,28 @@
+.breadcrumbs {
+  margin-top: 50px;
+}
+
+.breadcrumbs__link {
+  display: inline-block;
+  vertical-align: middle;
+  color: #bbb;
+  font-size: 13px;
+  .transition();
+}
+
+a.breadcrumbs__link {
+  &::after {
+    content: "\2014";
+    margin-top: -3px;
+    padding: 0 11px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #ddd;
+  }
+  
+  &:hover,
+  &:active {
+    color: @bordo;
+    .transition();
+  }
+}

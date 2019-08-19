@@ -1,0 +1,138 @@
+.review {
+  position: relative;
+}
+
+.review__btns {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    left: 250px;
+    right: 0;
+    top: 50%;
+    display: block;
+    height: 1px;
+    background: #f1f1f1;
+  }
+}
+
+.review__list {
+  .reset();
+  list-style: none;
+  margin-bottom: 100px;
+}
+
+.review__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 49px;
+  margin-bottom: 26px;
+  border: 1px solid #eff1f5;
+}
+
+.review__info {
+  width: ~"calc(100% - 250px)";
+  
+  p {
+    margin-top: 25px;
+    margin-bottom: 0;
+  }
+  time {
+    color: #999;
+    font-size: 13px;
+  }
+}
+
+.review__avatar {
+  width: 200px;
+}
+
+.review__icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.review__position {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+  font-size: 10px;
+}
+
+.review__name {
+  margin-top: 0;
+}
+
+.review__top {
+  position: relative;
+  padding-left: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  
+  &::before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/icons/left-quote.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.1;
+  }
+}
+
+.review__stars {
+  height: 20px;
+  margin-right: 40px;
+  overflow: hidden;
+  
+  &--inactive {
+    img {
+      margin-top: -20px;
+    }
+  }
+}
+
+.review__file {
+  position: relative;
+  margin-top: 30px;
+  padding-left: 60px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(../img/icons/docs.svg) 0 -84px no-repeat;
+    background-position: -42px -42px;
+  }
+}
+
+.review__link {
+  display: block;
+  line-height: 1.2;
+  
+  &:hover,
+  &:active {
+    color: @bordo;
+  }
+}
+
+.review__size {
+  color: #999;
+  line-height: 1;
+}
