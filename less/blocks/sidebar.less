@@ -1,6 +1,7 @@
 .sidebar {
   width: 240px;
   padding-top: 10px;
+  margin-bottom: 100px;
 }
 
 .sidebar__list {
@@ -19,11 +20,13 @@
   }
   
   &:hover,
-  &:active,
+  &:active {
+    background: #f8f9fb;
+    .transition();
+  }
   &--active {
     font-weight: 700;
     background: #f8f9fb;
-    .transition();
   }
 }
 
