@@ -51,6 +51,24 @@ $('.subscribe').click(function() {
   $('.overlay').addClass('overlay--show');
 });
 
+$('.sidebar__btn--call').click(function() {
+  $('.bar').addClass('bar--opened');
+  $('.modal--call').addClass('modal--opened');
+  $('.overlay').addClass('overlay--show');
+});
+
+$('.sidebar__btn--mail').click(function() {
+  $('.bar').addClass('bar--opened');
+  $('.modal--mail').addClass('modal--opened');
+  $('.overlay').addClass('overlay--show');
+});
+
+$('.sidebar__btn--feedback').click(function() {
+  $('.bar').addClass('bar--opened');
+  $('.modal--feedback').addClass('modal--opened');
+  $('.overlay').addClass('overlay--show');
+});
+
 //Menu
 $('.nav-btn').click(function() {
   $('.nav').slideDown();
