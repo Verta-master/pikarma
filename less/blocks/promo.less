@@ -1,3 +1,18 @@
+.promo__slider {
+  .promo__prev,
+  .promo__next {
+    opacity: 0;
+  }
+  
+  &:hover {
+    .promo__prev,
+    .promo__next {
+      opacity: 1;
+      .transition();
+    }
+  }
+}
+
 .promo__slide {
   box-sizing: border-box;
   height: 550px;
@@ -64,6 +79,10 @@
     background-color: @bordo;
     .transition();
   }
+}
+
+.promo__next {
+  right: 75px;
 }
 
 .promo__btn {

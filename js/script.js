@@ -2,8 +2,10 @@
 $(window).scroll(function(){
   if ((window.pageYOffset || document.documentElement.scrollTop ||document.body.scrollTop) >= 100) {
     $(".btn-top").fadeIn();
+    $('header').addClass('header--scroll');
   } else {
     $(".btn-top").fadeOut();
+    $('header').removeClass('header--scroll');
   };
 });
 
@@ -48,6 +50,13 @@ $('.bar--feedback').click(function() {
 $('.subscribe').click(function() {
   $('.bar').addClass('bar--opened');
   $('.modal--subscribe').addClass('modal--opened');
+  $('.overlay').addClass('overlay--show');
+});
+
+$('.call').click(function(evt) {
+  evt.preventDefault();
+  $('.bar').addClass('bar--opened');
+  $('.modal--call').addClass('modal--opened');
   $('.overlay').addClass('overlay--show');
 });
 
