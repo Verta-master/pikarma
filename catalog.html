@@ -188,34 +188,44 @@
         <ul class="catalog__products">
           <li class="catalog__point">
             <a href="#" class="catalog__name">
-              <p class="catalog__title">Затворы дисковые осесимметричные серии 00</p>
+              <p class="catalog__link">Затворы дисковые осесимметричные серии 00</p>
               <span class="catalog__number">0 товаров</span>
             </a>
           </li>
           <li class="catalog__point">
             <a href="#" class="catalog__name">
-              <p class="catalog__title">Затворы дисковые осесимметричные серии 01</p>
+              <p class="catalog__link">Затворы дисковые осесимметричные серии 01</p>
               <span class="catalog__number">0 товаров</span>
             </a>
           </li>
           <li class="catalog__point">
             <a href="#" class="catalog__name">
-              <p class="catalog__title">Затворы дисковые трехэксцентриковые серии 03</p>
+              <p class="catalog__link">Затворы дисковые трехэксцентриковые серии 03</p>
               <span class="catalog__number">0 товаров</span>
             </a>
           </li>
           <li class="catalog__point">
             <a href="#" class="catalog__name">
-              <p class="catalog__title">Затворы дисковые трехэксцентриковые серии 04</p>
+              <p class="catalog__link">Затворы дисковые трехэксцентриковые серии 04</p>
               <span class="catalog__number">0 товаров</span>
             </a>
           </li>
         </ul>
         
         <div class="wrapper-columns">
+          <div class="switcher">
+            <input type="checkbox" id="switch" class="switcher__checkbox" checked>
+            <label for="switch" class="switcher__label"></label>
+          </div>
           <aside class="sidebar">
             <nav class="sidebar__nav">
-              <button type="button" class="sidebar__menu">Продукция</button>
+              <button type="button" class="sidebar__menu">Продукция 
+                <span class="sidebar__arrow">
+                  <svg x="0px" y="0px" viewBox="0 0 240.835 240.835" style="enable-background:new 0 0 240.835 240.835;" xml:space="preserve">
+                    <path d="M129.007,57.819c-4.68-4.68-12.499-4.68-17.191,0L3.555,165.803c-4.74,4.74-4.74,12.427,0,17.155 	c4.74,4.74,12.439,4.74,17.179,0l99.683-99.406l99.671,99.418c4.752,4.74,12.439,4.74,17.191,0c4.74-4.74,4.74-12.427,0-17.155 	L129.007,57.819z"/>
+                  </svg>
+                </span>
+              </button>
               <ul class="sidebar__list">
                 <li class="sidebar__item sidebar__item--active">
                   <a href="#" class="sidebar__link">Затворы дисковые</a>
@@ -636,7 +646,7 @@
                       <a href="#" class="nav__sublink">Затворы дисковые</a>
                       <span class="nav__arrow">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3 5">
-                          <path data-name="Rectangle 323 copy 9" class="cls-1" d="M960,958v-5l3,2.514Z" transform="translate(-960 -953)"></path>
+                          <path d="M960,958v-5l3,2.514Z" transform="translate(-960 -953)"></path>
                         </svg>
                       </span>
                       <ul class="nav__drop">
@@ -731,10 +741,26 @@
   <script src="js/script.js"></script>
   <script src="js/jquery.nicescroll.min.js"></script>
   
-<!-- Scrollbar -->
+  <!-- Scrollbar -->
   <script>
     $('.modal__wrap').niceScroll();
     $('.nav__wrap').niceScroll();
+  </script>
+  
+  <!-- Sidebar button -->
+  <script>
+    $('.sidebar__menu').click(function() {
+      $(this).next().slideToggle();
+      $(this).toggleClass('sidebar__menu--open');
+    });
+  </script>
+  
+  <!-- Switcher -->
+  <script>
+    $('.switcher__checkbox').change(function() {
+      $('.sidebar').toggleClass('sidebar--hidden');
+      $('.content').toggleClass('content--wide');
+    });
   </script>
 </body>
 </html>
