@@ -1909,7 +1909,7 @@ h2,
 }
 .modal {
   position: fixed;
-  z-index: 1000;
+  z-index: 500;
   top: 0;
   bottom: 0;
   right: -100%;
@@ -1919,6 +1919,7 @@ h2,
 }
 .modal--opened {
   right: 0;
+  z-index: 1000;
   -webkit-transition: linear 0.3s;
   transition: linear 0.3s;
 }
@@ -2682,6 +2683,7 @@ a.breadcrumbs__link:active {
     right: auto;
     width: 320px;
     max-width: 100%;
+    overflow: hidden;
   }
   .nav .wrapper {
     padding-left: 0;
@@ -2695,8 +2697,10 @@ a.breadcrumbs__link:active {
     opacity: 0;
   }
   .nav__wrap {
+    width: 320px;
     padding-top: 35px;
     padding-bottom: 35px;
+    overflow-y: scroll;
   }
   .nav__item {
     width: 100%;
