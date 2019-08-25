@@ -30,49 +30,75 @@ $('.search__close').click(function() {
 
 //Side buttons
 $('.bar--call').click(function() {
+  $('.modal').removeClass('modal--opened');
   $('.bar').addClass('bar--opened');
   $('.modal--call').addClass('modal--opened');
   $('.overlay').addClass('overlay--show');
 });
 
 $('.bar--mail').click(function() {
+  $('.modal').removeClass('modal--opened');
   $('.bar').addClass('bar--opened');
   $('.modal--mail').addClass('modal--opened');
   $('.overlay').addClass('overlay--show');
 });
 
 $('.bar--feedback').click(function() {
+  $('.modal').removeClass('modal--opened');
   $('.bar').addClass('bar--opened');
   $('.modal--feedback').addClass('modal--opened');
   $('.overlay').addClass('overlay--show');
 });
 
 $('.subscribe').click(function() {
+  $('.modal').removeClass('modal--opened');
   $('.bar').addClass('bar--opened');
   $('.modal--subscribe').addClass('modal--opened');
   $('.overlay').addClass('overlay--show');
 });
 
+$('.nav__btn').click(function(evt) {
+  evt.preventDefault();
+  $('.modal').removeClass('modal--opened');
+  $('.nav').slideUp();
+  $('.bar').addClass('bar--opened');
+  $('.modal--mail').addClass('modal--opened');
+  $('.overlay').addClass('overlay--show');
+});
+
 $('.call').click(function(evt) {
   evt.preventDefault();
+  $('.modal').removeClass('modal--opened');
+  $('.bar').addClass('bar--opened');
+  $('.modal--call').addClass('modal--opened');
+  $('.overlay').addClass('overlay--show');
+});
+
+$('.nav__call').click(function(evt) {
+  evt.preventDefault();
+  $('.modal').removeClass('modal--opened');
+  $('.nav').slideUp();
   $('.bar').addClass('bar--opened');
   $('.modal--call').addClass('modal--opened');
   $('.overlay').addClass('overlay--show');
 });
 
 $('.sidebar__btn--call').click(function() {
+  $('.modal').removeClass('modal--opened');
   $('.bar').addClass('bar--opened');
   $('.modal--call').addClass('modal--opened');
   $('.overlay').addClass('overlay--show');
 });
 
 $('.sidebar__btn--mail').click(function() {
+  $('.modal').removeClass('modal--opened');
   $('.bar').addClass('bar--opened');
   $('.modal--mail').addClass('modal--opened');
   $('.overlay').addClass('overlay--show');
 });
 
 $('.sidebar__btn--feedback').click(function() {
+  $('.modal').removeClass('modal--opened');
   $('.bar').addClass('bar--opened');
   $('.modal--feedback').addClass('modal--opened');
   $('.overlay').addClass('overlay--show');
